@@ -1,7 +1,6 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, prefer_interpolation_to_compose_strings, use_build_context_synchronously
 
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:stocks_app/Helpers/app_colors.dart';
@@ -24,7 +23,7 @@ class FirstSplashPage extends StatefulWidget {
 class _FirstSplashPageState extends State<FirstSplashPage> {
   @override
   void initState() {
-    Timer(Duration(microseconds: 500), () async {
+    Timer(Duration(milliseconds: 300), () async {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (BuildContext context) => SplashPage()));
     });
@@ -96,19 +95,8 @@ class _SplashPageState extends State<SplashPage> {
         width: Get.width,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(AppImages.imges + "background.png"),
+                image: AssetImage(AppImages.imges + "SPLASH.png"),
                 fit: BoxFit.cover)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            CommonWidgets().textWidget(
-              text: "App Logo",
-              textColor: AppColors.whiteColor,
-              textSize: 20.0,
-              textWeight: FontWeight.w700,
-            )
-          ],
-        ),
       ),
     );
   }

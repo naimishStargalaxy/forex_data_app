@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, sort_child_properties_last
 
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:stocks_app/Helpers/app_colors.dart';
 import 'package:stocks_app/Helpers/app_images.dart';
 import 'package:stocks_app/Helpers/common_widgets.dart';
@@ -116,12 +115,6 @@ class AppDrawerWidget {
               textColor: AppColors.softGreyColor,
             ),
           ),
-          // ListTile(
-          //   title: CommonWidgets().textWidget(
-          //     text: "Logout",
-          //     textColor: AppColors.redColor,
-          //   ),
-          // ),
         ],
       ),
     );

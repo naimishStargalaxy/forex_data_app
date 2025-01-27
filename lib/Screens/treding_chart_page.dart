@@ -1,6 +1,6 @@
 // // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-// ignore_for_file: no_wildcard_variable_uses, prefer_const_constructors, avoid_print, depend_on_referenced_packages
+// ignore_for_file: no_wildcard_variable_uses, prefer_const_constructors, avoid_print, depend_on_referenced_packages, unnecessary_brace_in_string_interps
 
 import 'dart:convert';
 
@@ -209,7 +209,6 @@ class _TredingChartPageState extends State<TredingChartPage> {
         series: <CandleSeries<ChartSampleData, double>>[
           CandleSeries(
             enableSolidCandles: true,
-            
             xValueMapper: (ChartSampleData sales, _) =>
                 double.parse(sales.v.toString()),
             lowValueMapper: (low, _) => low.l!.length,
